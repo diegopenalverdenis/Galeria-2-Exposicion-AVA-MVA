@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Prueba de Audio: Autana</title>
+</head>
+<body style="background-color: black; color: white; font-family: sans-serif; padding: 40px;">
+
+  <h2>Prueba de Audio: Autana</h2>
+
+  <!-- Reproductor básico -->
+  <audio id="ambientAudio" src="audio/Autana.mp3" autoplay loop controls></audio>
+
+  <br><br>
+
+  <!-- Botón con ícono dinámico -->
+  <button onclick="toggleAudio()" style="background: none; border: none;">
+    <img id="audioIcon" src="imagenes/sound-on-icon-icon-md.png" alt="Audio Toggle" style="width: 40px;">
+  </button>
+
+  <script>
+    window.addEventListener("load", function() {
+      var audio = document.getElementById("ambientAudio");
+      var icon = document.getElementById("audioIcon");
+
+      if (audio) {
+        audio.volume = 0.5;
+      }
+
+      window.toggleAudio = function() {
+        if (!audio) return;
+
+        if (audio.paused) {
+          audio.play();
+          icon.src = "imagenes/sound-on-icon-icon-md.png";
+        } else {
+          audio.pause();
+          icon.src = "imagenes/sound-off-icon-icon-md.png";
+        }
+      };
+    });
+  </script>
+
+</body>
+</html>

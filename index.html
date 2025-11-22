@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes ">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-1-ava-expo-entrada-al-museo">
+        <li class="text">1-AVA-Expo-Entrada al Museo</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-2-ava-expo-lobby">
+        <li class="text">2-AVA-Expo-Lobby</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-3-ava-expo-entrada">
+        <li class="text">3-AVA-Expo-Entrada</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-4-ava-ala-1-recuerdo-cotidiano-1">
+        <li class="text">4-AVA-Ala-1-Recuerdo Cotidiano-1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-5-ava-ala-1-2">
+        <li class="text">5-AVA-Ala-1-2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-6-ava-ala-1-3">
+        <li class="text">6-AVA-Ala-1-3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-7-ava-ala-1-4">
+        <li class="text">7-AVA-Ala-1-4</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-8-ava-centrosala">
+        <li class="text">8-AVA-CentroSala</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-9-ava-ala-2-1-aliento-silvestre">
+        <li class="text">9-AVA-Ala-2-1-Aliento Silvestre</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-10-ava-ala-2-2">
+        <li class="text">10-AVA-Ala-2-2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-11-ava-ala-3-1-el-horizonte-y-el-alma">
+        <li class="text">11-AVA-Ala-3-1-El Horizonte y el Alma</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-12-ava-ala-3-2">
+        <li class="text">12-AVA-Ala-3-2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-13-ava-ala-4-1-la-naturaleza-soada">
+        <li class="text">13-AVA-Ala-4-1-La Naturaleza Soñada</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-14-ava-ala-4-2">
+        <li class="text">14-AVA-Ala-4-2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-15-ava-cafetn">
+        <li class="text">15-AVA-Cafetín</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-16-ava-cafetnterraza">
+        <li class="text">16-AVA-CafetínTerraza</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-17-ava-jardinescultura">
+        <li class="text">17-AVA-JardinEscultura</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
+<!-- AUDIO AMBIENTAL -->
+<audio id="ambientAudio" src="audio/Autana.mp3" autoplay loop></audio>
+
+<!-- CONTENEDOR DE AUDIO + TEXTO -->
+<div style="position: fixed; bottom: 20px; left: 20px; z-index: 999; display: flex; flex-direction: column; align-items: flex-start;">
+
+  <!-- CONTROL DE VOLUMEN REFINADO -->
+  <div style="margin-left: 4px;">
+    <input type="range" min="0" max="1" step="0.01" value="0.5"
+           onchange="document.getElementById('ambientAudio').volume = this.value"
+           style="width: 80px; height: 4px; background: white; accent-color: black; border: 1px solid black; border-radius: 4px; margin-bottom: 16px;">
+  </div>
+
+  <div style="display: flex; align-items: center;">
+    <!-- BOTÓN CON ÍCONO DINÁMICO -->
+    <button onclick="toggleAudio()" style="background: none; border: none;">
+      <img id="audioIcon" src="imagenes/sound-on-icon-icon-md.png" alt="Audio Toggle" style="width: 40px;">
+    </button>
+
+    <!-- TEXTO CURATORIAL EN UNA LÍNEA -->
+    <div id="infoCuratorial" class="info-curatorial">
+      Autana — Autor: Diego Peñalver Denis — Álbum: Ecos Topográficos
+    </div>
+  </div>
+
+  <!-- ENLACE DE DESCARGA -->
+  <a href="audio/Autana.mp3" download class="descarga">Descargar</a>
+</div>
+
+<!-- ESTILOS -->
+<style>
+  .info-curatorial {
+    color: #1a1a1a; /* gris oscuro elegante */
+    font-size: 12px;
+    font-family: sans-serif;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+  .info-curatorial.visible {
+    opacity: 1;
+  }
+  .descarga {
+    color: #1a1a1a;
+    font-size: 12px;
+    font-family: sans-serif;
+    text-decoration: underline;
+    margin-top: 4px;
+    margin-left: 50px; /* alineado con el texto curatorial */
+  }
+</style>
+
+<!-- SCRIPT DE CONTROL -->
+<script>
+  // Volumen inicial
+  document.getElementById("ambientAudio").volume = 0.5;
+
+  // Toggle de audio + info curatorial
+  function toggleAudio() {
+    var audio = document.getElementById("ambientAudio");
+    var icon = document.getElementById("audioIcon");
+    var info = document.getElementById("infoCuratorial");
+
+    if (audio.paused) {
+      audio.play();
+      icon.src = "imagenes/sound-on-icon-icon-md.png";
+      info.classList.add("visible");
+    } else {
+      audio.pause();
+      icon.src = "imagenes/sound-off-icon-md.png";
+      info.classList.remove("visible");
+    }
+  }
+
+  // Mostrar info curatorial al cargar (fade-in inicial)
+  window.addEventListener("load", function() {
+    document.getElementById("infoCuratorial").classList.add("visible");
+  });
+</script>
+
+<!-- VISOR CURATORIAL COMPLETO -->
+<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+     background-color: rgba(0,0,0,0.8); z-index: 1000; padding: 20px; justify-content: center; align-items: center;">
+
+  <!-- Encabezado flotante con título y botón de cierre -->
+  <div id="popupHeader" style="position: absolute; top: 20px; left: 20px; right: 20px; z-index: 1001; display: flex; justify-content: space-between; align-items: center; color: white; font-family: sans-serif;">
+    <span id="popupTitleHeader" style="font-size: 18px;"></span>
+    <span id="popupClose" style="cursor: pointer; font-size: 24px;">✕</span>
+  </div>
+
+  <!-- Contenido del visor -->
+  <div id="popupContent" style="display: flex; flex-wrap: wrap; gap: 20px; max-width: 90%; max-height: 90%; align-items: center;">
+ <img id="popupImage" src="" alt="" style="max-width: 90vw; max-height: 80vh; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto; cursor: zoom-in; transition: transform 0.3s ease;">
+    <div id="popupText" style="color: white; font-family: sans-serif; max-width: 300px; flex: 1;">
+      <h2 id="popupTitle" style="margin-top: 0;"></h2>
+      <p id="popupDetails"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // === BLOQUE CURATORIAL: Visor de imagen funcional y reversible ===
+  // Fecha: 2025-11-20
+  // Función: Abre visor de imagen, limpia paneles flotantes, evita reactivación
+
+  function openPopup(imageSrc, title, details) {
+  if (!imageSrc || imageSrc.trim() === "") return;
+
+  const img = document.getElementById("popupImage");
+  img.style.display = "none";
+  img.src = imageSrc;
+
+  img.onload = () => {
+    img.style.display = "block";
+  };
+
+  // Zoom conmutable en el visor interno
+  // Zoom conmutable en el visor interno
+img.onclick = () => {
+  img.classList.toggle("zoomed");
+  if (!img.classList.contains("zoomed")) {
+    // reset al salir del zoom
+    img.style.width = "auto";
+    img.style.height = "auto";
+  }
+};
+
+  document.getElementById("popupTitle").innerHTML = title;
+  document.getElementById("popupTitleHeader").innerHTML = title;
+  document.getElementById("popupDetails").innerHTML = details;
+  document.getElementById("popupOverlay").style.display = "flex";
+}
+
+// Cierre con clic en el overlay (no tocar viewer ni hotspots)
+document.getElementById("popupOverlay").addEventListener("click", function(e) {
+  if (e.target.id === "popupOverlay") {
+    this.style.display = "none";
+  }
+});
+
+// Cierre con el botón ✕ del header (opcional, si lo mantienes)
+document.getElementById("popupClose").addEventListener("click", function(e) {
+  e.stopPropagation();
+  document.getElementById("popupOverlay").style.display = "none";
+});
+</script>
+
+</body>
+</html>
