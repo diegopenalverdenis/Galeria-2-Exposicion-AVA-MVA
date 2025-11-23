@@ -147,7 +147,7 @@
   <div style="display: flex; align-items: center;">
     <!-- BOTÓN CON ÍCONO DINÁMICO -->
     <button onclick="toggleAudio()" style="background: none; border: none;">
-      <img id="audioIcon" src="imagenes/sound-on-icon-icon-md.png" alt="Audio Toggle" style="width: 40px;">
+      <img id="audioIcon" src="Imagenes/sound-on-icon-icon-md.png" alt="Audio Toggle" style="width: 40px;">
     </button>
 
     <!-- TEXTO CURATORIAL EN UNA LÍNEA -->
@@ -197,11 +197,11 @@
 
     if (audio.paused) {
       audio.play();
-      icon.src = "imagenes/sound-on-icon-icon-md.png";
+      icon.src = "Imagenes/sound-on-icon-icon-md.png";
       info.classList.add("visible");
     } else {
       audio.pause();
-      icon.src = "imagenes/sound-off-icon-md.png";
+      icon.src = "Imagenes/sound-off-icon-md.png";
       info.classList.remove("visible");
     }
   }
