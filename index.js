@@ -808,7 +808,7 @@ if (hotspot.title === "<span class=\"cf0\">Sylvia</span><span class=\"cf0\"> God
 if (hotspot.title === "<p class=\"pf0\"><span class=\"cf0\">Creación</span></p>") {
   wrapper.querySelector('.info-hotspot-header').addEventListener('click', function(e) {
     e.stopPropagation();
-    openPopup("Imagenes/Ala-4/Creación.jpg", hotspot.title, hotspot.text);
+    openPopup("Imagenes/Ala-4/Creación.JPG", hotspot.title, hotspot.text);
   });
 }
 
